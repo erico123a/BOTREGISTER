@@ -13,23 +13,23 @@ module.exports = {
     const tag = await `${TAG}`;
 
     if (message.channel.id != `${channel}`) {
-      const embed2 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription(`Kamu tidak bisa menggunakan command ini kecuali di <#${channel}>`);
+      const embed2 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription(`Kamu tidak bisa menggunakan command ini kecuali di <#${channel}>`).setImage("https://i.imgur.com/4M7IWwP.gif");
       return message.reply({ embeds: [embed2] });
     }
 
     if (!nickname) {
-      const embed3 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription('Mohon masukan nama kamu yang kamu ingin gunakan!');
+      const embed3 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription('Mohon masukan nama kamu yang kamu ingin gunakan!').setImage("https://i.imgur.com/4M7IWwP.gif");
       return message.reply({ embeds: [embed3] });
     }
 
     if (nickname.length > 32) {
-      const embed4 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription('Kamu tidak bisa memasukan nama sampai 32 kata!');
+      const embed4 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription('Kamu tidak bisa memasukan nama sampai 32 kata!').setImage("https://i.imgur.com/4M7IWwP.gif");
       return message.reply({ embeds: [embed4] });
     }
 
     try {
       if (!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
-        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accept**, ***Kamu sudah terverifikasi di server ${message.guild.name}***`).setImage("https://tenor.com/bayME.gif").setTimestamp();
+        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accept**, ***Kamu sudah terverifikasi di server ${message.guild.name}***`).setImage("https://i.imgur.com/4M7IWwP.gif").setTimestamp();
 
         if (!(await roleremove)) {
           await message.member.roles.add(`${role}`);
