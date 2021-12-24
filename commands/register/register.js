@@ -29,7 +29,7 @@ module.exports = {
 
     try {
       if (!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
-        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accept**, ***Kamu sudah terverifikasi di server ${message.guild.name}***`).setTimestamp();
+        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accept**, ***Kamu sudah terverifikasi di server ${message.guild.name}***`).setImage("https://tenor.com/bayME.gif").setTimestamp();
 
         if (!(await roleremove)) {
           await message.member.roles.add(`${role}`);
