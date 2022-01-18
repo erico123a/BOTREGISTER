@@ -44,7 +44,7 @@ module.exports = {
           if (await roleremove) {
             await message.member.roles.remove(`${roleremove}`);
           }
-          await message.member.setNickname(`${nickname}`);
+          await message.member.setNickname(`[WARGA] ${nickname}`);
           return message.reply({ embeds: [embed] });
         } else {
           await message.member.roles.add(`${role}`);
