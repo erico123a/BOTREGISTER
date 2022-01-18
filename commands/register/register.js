@@ -4,7 +4,7 @@ const { ID_CHANNEL, TAG, ID_ROLE, ID_ROLE_REMOVE } = require('../../util/config.
 module.exports = {
   name: 'register',
   aliases: ['r'],
-  description: 'Ini Command register',
+  description: 'Ini Command SRP',
   async execute(message, args, client) {
     const nickname = args.join(' ');
     const channel = await `${ID_CHANNEL}`;
